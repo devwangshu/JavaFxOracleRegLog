@@ -15,7 +15,11 @@ import javafx.util.Duration;
 public class Main extends Application
 {
 
-	private final String FILENAME = "C:\\Users\\user0581\\Dewangshu\\LoginRegDew\\src\\application\\app.properties";
+//	private final String FILENAME = "C:\\Users\\user0581\\Dewangshu\\LoginRegDew\\src\\application\\app.properties";
+	
+	String currentDir = System.getProperty("user.dir");
+	
+    private final String FILENAME = currentDir+"\\"+"app.properties";
     @Override
     public void start(Stage stage) throws Exception
     {

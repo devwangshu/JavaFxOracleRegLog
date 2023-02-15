@@ -47,7 +47,11 @@ public class DBConfigController {
     @FXML protected void handleSaveButtonAction(ActionEvent event) throws ClassNotFoundException, IOException {
     		System.out.println("Save in button pressed");
     		
-    		String propertiesFile = "C:\\Users\\user0581\\Dewangshu\\LoginRegDew\\src\\application\\app.properties";  
+//    		String propertiesFile = "C:\\Users\\user0581\\Dewangshu\\LoginRegDew\\src\\application\\app.properties";  
+    		String currentDir = System.getProperty("user.dir");
+    		
+    		String propertiesFile = currentDir+"\\"+"app.properties";
+    		System.out.println("Current Directory with file name:"+propertiesFile);
     		//Instantiating the properties file
     	      Properties props = new Properties();
     	      //Populating the properties file
