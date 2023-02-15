@@ -9,7 +9,11 @@ public class AppProperties {
 
     // FILENAME = Path to properties-file
     // Store and protect it where ever you want
-    private final String FILENAME = "C:\\Users\\user0581\\Dewangshu\\LoginRegDew\\src\\application\\app.properties";
+    //private final String FILENAME = "C:\\Users\\user0581\\Dewangshu\\LoginRegDew\\src\\application\\app.properties";
+    
+    String currentDir = System.getProperty("user.dir");
+	
+    private final String FILENAME = currentDir+"\\"+"app.properties";
     
     private static final AppProperties config_file = new AppProperties();
     private Properties prop = new Properties();
