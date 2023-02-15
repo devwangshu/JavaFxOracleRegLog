@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="759.0" style="-fx-border-color: red; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DBConfigController">
+   <children>
+      <Pane layoutY="8.0" prefHeight="134.0" prefWidth="759.0">
+         <children>
+            <ImageView fitHeight="107.0" fitWidth="120.0" layoutX="87.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@oracle_image.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="347.0" layoutY="9.0" text="CDAC Kolkata">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="259.0" layoutY="36.0" text="Oracle Database Config" textFill="#20c359">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="107.0" layoutY="169.0" prefHeight="388.0" prefWidth="636.0">
+         <children>
+            <Label layoutX="126.0" layoutY="38.0" text="Host Name" />
+            <TextField fx:id="textHost" layoutX="236.0" layoutY="34.0" prefHeight="25.0" prefWidth="201.0" text="127.0.0.1" />
+            <Label layoutX="126.0" layoutY="72.0" text="Database User" />
+            <TextField fx:id="textUser" layoutX="236.0" layoutY="68.0" prefHeight="25.0" prefWidth="201.0" />
+            <Label layoutX="126.0" layoutY="106.0" text="Database Password" />
+            <TextField fx:id="textPassword" layoutX="236.0" layoutY="102.0" prefHeight="25.0" prefWidth="201.0" />
+            
+                  <Label layoutX="131.0" layoutY="147.0" text="Port" />
+            <TextField fx:id="textPort" layoutX="236.0" layoutY="143.0" prefHeight="25.0" prefWidth="201.0" text="1521" />
+            <Label layoutX="133.0" layoutY="186.0" text="SID" />
+            <TextField fx:id="textSid" layoutX="236.0" layoutY="182.0" prefHeight="25.0" prefWidth="201.0" text="xe" />
+            
+                  <Button fx:id="btnSave" disable="true" layoutX="306.0" layoutY="326.0" mnemonicParsing="false" onAction="#handleSaveButtonAction" prefHeight="23.0" prefWidth="120.0" text="Save" />
+            <Button layoutX="186.0" layoutY="326.0" mnemonicParsing="false" onAction="#handleCloseButtonAction" text="Close" />
+            <Button layoutX="236.0" layoutY="228.0" mnemonicParsing="false" onAction="#handleTestConnectionButtonAction" prefHeight="25.0" prefWidth="201.0" text="Test Connection" />
+            <Label fx:id="result" layoutX="242.0" layoutY="281.0" text="Result:" textFill="#bccf19" />
+            
+                  
+         </children>
+      </Pane>
+      <Label layoutX="627.0" layoutY="535.0" text="Demo By:Dewangshu" />
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>
